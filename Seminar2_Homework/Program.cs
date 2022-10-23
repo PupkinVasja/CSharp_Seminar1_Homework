@@ -6,20 +6,28 @@
 //782 -> 8
 //918 -> 1
 
+/*
+void Cutter (int threeDigitNumber)
+{
+    int hundreds = threeDigitNumber / 100;
+    int eds = threeDigitNumber % 10;
+    int decimes = (threeDigitNumber - hundreds*100 - eds) / 10;
+    Console.WriteLine($"The second digit of number {threeDigitNumber} is {decimes}.");
+}
+
+
 Console.Write("Enter three-digit number: ");
 int threeDigitNumber = Convert.ToInt32(Console.ReadLine());
 
 if (threeDigitNumber >= 100 & threeDigitNumber < 1000)
 {
-    Console.WriteLine ("yes");
+    Cutter (threeDigitNumber);
 }
 else
 {
-    Console.WriteLine ("no");
+    Console.WriteLine ("This is not a three-digit number!");
 }
-
-
-
+*/
 
 
 //Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
