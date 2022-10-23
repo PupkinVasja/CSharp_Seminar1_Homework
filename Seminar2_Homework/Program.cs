@@ -6,7 +6,7 @@
 //782 -> 8
 //918 -> 1
 
-/*
+
 void Cutter (int threeDigitNumber)
 {
     int hundreds = threeDigitNumber / 100;
@@ -27,7 +27,7 @@ else
 {
     Console.WriteLine ("This is not a three-digit number!");
 }
-*/
+
 
 
 //Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
@@ -36,40 +36,59 @@ else
 //78 -> третьей цифры нет
 //32679 -> 6
 
-
-//void thirdDigitFinder (int number)
 /*
-
-int tempNumber = number;
-int numberOfDigit = 0;
-int divider1 = 1;
-int divider2 = 1;
-int thirdDigit;
-
-while (tempNumber > 0)
+int thirdDigitFinder (int number)
 {
-    tempNumber = tempNumber / 10;
-    numberOfDigit = numberOfDigit + 1;
+    int tempNumber = number;
+    int numberOfDigit = 0;
+    int divider1 = 1;
+    int divider2 = 1;
+    int count1 = 0;
+    int count2 = 0;
+    int thirdDigit;
+
+    while (tempNumber > 0)
+    {
+        tempNumber = tempNumber / 10;
+        numberOfDigit = numberOfDigit + 1;
+    }
+
+    while (count1 < (numberOfDigit - 2))
+    {
+        divider1 = divider1 * 10;
+        count1 = count1 + 1;
+    }
+
+    while (count2 < (numberOfDigit - 3))
+    {
+        divider2 = divider2 * 10;
+        count2 = count2 + 1;
+    }
+
+    thirdDigit = number % divider1 / divider2;
+
+    return thirdDigit;
 }
 
-int multiplier1 = numberOfDigit - 2;
-int multiplier2 = numberOfDigit - 3;
-
-
-divider1 = numberOfDigit - 2;
-divider2 = numberOfDigit - 3;
-thirdDigit = number % 
-
-/*
 Console.Write("Enter int number: ");
 int number = Convert.ToInt32(Console.ReadLine());
-if (number < -100 & number > 100)
+if (number >= 100)
 {
     thirdDigitFinder(number);
+    Console.WriteLine($"The third digit of number {number} is {thirdDigitFinder(number)}.");
 }
 else
 {
-    Console.WriteLine($"Number {number} does not have third digit");
+    if (number <= -100)
+    {
+        number = number*(-1);
+        thirdDigitFinder(number);
+        Console.WriteLine($"The third digit of number {number*(-1)} is {thirdDigitFinder(number)}.");
+    }
+    else
+    {
+        Console.WriteLine($"Number {number} does not have third digit.");
+    }
 }
 */
 
@@ -81,6 +100,7 @@ else
 //7 -> да
 //1 -> нет
 
+/*
 void Check (int numberOfDay)
 {
     if (numberOfDay < 6)
@@ -89,7 +109,7 @@ void Check (int numberOfDay)
     }
     else
     {
-        Console.WriteLine("Yes, this day is a weekend :D");
+        Console.WriteLine("Yehoo, this day is a weekend :D");
     }
 } 
 
@@ -104,3 +124,4 @@ else
 {
     Console.WriteLine("Incorrect number of the day of the week!");
 }
+*/
