@@ -6,6 +6,17 @@
 //782 -> 8
 //918 -> 1
 
+Console.Write("Enter three-digit number: ");
+int threeDigitNumber = Convert.ToInt32(Console.ReadLine());
+
+if (threeDigitNumber >= 100 & threeDigitNumber < 1000)
+{
+    Console.WriteLine ("yes");
+}
+else
+{
+    Console.WriteLine ("no");
+}
 
 
 
