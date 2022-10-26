@@ -5,9 +5,34 @@
 // 12821 -> да
 // 23432 -> да
 
+void checkPalindrome (int n){
 
+int firstDigit;
+int secondDigit;
+int fourthDigit;
+int fifthDigit;
 
+firstDigit = n / 10000;
+fifthDigit = n % 10;
+secondDigit = (n / 1000) - firstDigit*10;
+fourthDigit = ((n % 100) - fifthDigit) / 10;
 
+if (firstDigit == fifthDigit & secondDigit == fourthDigit){
+    Console.WriteLine("YES, this number is a palindrome!");
+}
+else{
+    Console.WriteLine("NO, this number is not a palindrome!");
+}
+}
+
+Console.Write("Enter 5-digit number: ");
+int n = Convert.ToInt32(Console.ReadLine());
+if (n >= 10000 & n < 100000){
+    checkPalindrome (n);
+}
+else{
+    Console.WriteLine("This is not 5-digit number!");
+}
 
 
 
